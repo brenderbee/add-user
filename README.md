@@ -71,16 +71,8 @@ _Front-end dependencies_
 _Developer Dependencies_
 * Redux
 
-### User Stories
-* As a user, I want to see a table with all items displayed as rows.
-* As a user, I want to be able to sort by each column.
-* As a user, I want to be able to change how many items I see per page.
-* As a user,  I want to be able to navigate between each page of results.
-* As a user, I want to be able to skip to the beginning or end of the list of items.
-
 ### Notes
-* Ran into issues with the async nature of setState. Remember to use async / await or promises.
-* Spent a lot of time trying to build custom sort method. Use industry standard lodash instead.
+* No notes yet.
 
 
 
