@@ -6,8 +6,8 @@ function Table() {
   return (
     <Dialog open={true}>
       <DialogTitle id="form-dialog-title">Add User</DialogTitle>
-      <ModalFooter />
       <ModalForm />
+      <ModalFooter />
     </Dialog>
   );
 }
