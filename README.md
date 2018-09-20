@@ -75,7 +75,10 @@ _Developer Dependencies_
 * Redux
 
 ### Notes
-* No notes yet.
+* Use arrow functions in view components to bind local scope.
+* Use named components when importing for brevity.
+* Implement Redux and Immutable.js.
+* Build components with Material-UI.
 
 
 
