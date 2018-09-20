@@ -11,12 +11,12 @@ function TableHeader() {
   return (
     <div>
       <AppBar position="static">
-          <Toolbar className="table-header">
-            <Typography variant="title" color="inherit">
-              Current Users
-            </Typography>
-            <AddUser />
-          </Toolbar>
+        <Toolbar className="table-header">
+          <Typography variant="title" color="inherit">
+            Current Users
+          </Typography>
+          <AddUser />
+        </Toolbar>
       </AppBar>
     </div>
   );
