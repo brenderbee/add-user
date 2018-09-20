@@ -15,12 +15,15 @@ _The favicon.ico was created using an icon designed by Freepik at www.flaticon.c
 Main Ui: <br>
 <img src="https://raw.githubusercontent.com/brenderbee/add-user/master/src/assets/img/planning/main-view.jpg" width="800" />
 
-Add User Dialog: <br>
+Add/Edit User Dialog: <br>
 <img src="https://raw.githubusercontent.com/brenderbee/add-user/master/src/assets/img/planning/add-modal.jpg" width="800" />
 
-Edit User Dialog: <br>
-<img src="https://raw.githubusercontent.com/brenderbee/add-user/master/src/assets/img/planning/edit-modal1.jpg" width="800" />
-
+Planned Components (1): <br>
+<img src="https://raw.githubusercontent.com/brenderbee/add-user/master/src/assets/img/planning/component1.jpg" width="800" />
+Planned Components (2): <br>
+<img src="https://raw.githubusercontent.com/brenderbee/add-user/master/src/assets/img/planning/component2.jpg" width="800" />
+Planned Components (3): <br>
+<img src="https://raw.githubusercontent.com/brenderbee/add-user/master/src/assets/img/planning/component3.jpg" width="800" />
 
 ## Setup/Installation Requirement
 
