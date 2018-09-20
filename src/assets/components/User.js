@@ -1,5 +1,9 @@
 import React, { Fragment } from 'react';
-import { ListItem, ListItemText, Divider } from '@material-ui/core';
+import {
+  ListItem,
+  ListItemText,
+  Divider
+} from '@material-ui/core';
 import { UserActions, UserImage } from './';
 
 function User() {
