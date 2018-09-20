@@ -1,9 +1,10 @@
 import React from 'react';
 import { TableHeader, UserList } from './';
+import './../css/Table.css';
 
 function Table() {
   return (
-    <div>
+    <div className="table">
       <TableHeader />
       <UserList />
     </div>
