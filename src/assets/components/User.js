@@ -1,9 +1,11 @@
 import React from 'react';
+import { UserActions, UserImage } from './';
 
 function User() {
   return (
     <div>
-      User
+      <UserImage />
+      <UserActions />
     </div>
   );
 }
