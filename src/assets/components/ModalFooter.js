@@ -1,10 +1,16 @@
 import React from 'react';
+import { Button, DialogActions } from '@material-ui/core/';
 
 function ModalFooter() {
   return (
-    <div>
-      ModalFooter
-    </div>
+    <DialogActions>
+      <Button color="primary">
+        Cancel
+      </Button>
+      <Button color="primary">
+        Add
+      </Button>
+    </DialogActions>
   );
 }
 
