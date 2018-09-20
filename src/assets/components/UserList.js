@@ -1,10 +1,13 @@
 import React from 'react';
+import { List } from '@material-ui/core';
 import { User } from './';
 
 function UserList() {
   return (
     <div>
-      <User />
+      <List>
+        <User />
+      </List>
     </div>
   );
 }
