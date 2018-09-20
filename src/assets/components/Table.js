@@ -1,10 +1,11 @@
 import React from 'react';
-import { TableHeader } from './';
+import { TableHeader, UserList } from './';
 
 function Table() {
   return (
     <div>
       <TableHeader />
+      <UserList />
     </div>
   );
 }
