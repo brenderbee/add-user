@@ -2,17 +2,28 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
+import './../css/UserActions.css';
 
 function UserActions() {
   return (
     <div>
-      <Button variant="outlined" color="primary">
+      <Button
+        className="user-button"
+        variant="outlined"
+        color="primary"
+        size="small"
+      >
         Delete
-        <DeleteIcon />
+        <DeleteIcon className="user-icon"/>
       </Button>
-      <Button variant="outlined" color="secondary">
+      <Button
+        className="user-button"
+        variant="outlined"
+        color="secondary"
+        size="small"
+      >
         Edit
-        <EditIcon />
+        <EditIcon className="user-icon"/>
       </Button>
     </div>
   );
