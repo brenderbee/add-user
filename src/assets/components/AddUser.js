@@ -10,7 +10,7 @@ function AddUser() {
           variant="fab"
           color="secondary"
           aria-label="Add"
-          mini="true"
+          mini={true}
         >
           <AddIcon />
         </Button>
