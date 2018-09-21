@@ -31,6 +31,30 @@ describe('Add User App', () => {
     }
   };
 
+  const initialState = {
+    modalDisplay: false,
+    masterUserList: {
+      random: {
+        id: '0',
+        first_name: 'Fenneko',
+        last_name: 'Fox',
+        email: 'monotone@example.com'
+      },
+      random2: {
+        id: '1',
+        first_name: 'Restuko',
+        last_name: 'Panda',
+        email: 'aggrestuko@example.com'
+      },
+      random3: {
+        id: '2',
+        first_name: 'Ton',
+        last_name: 'Pig',
+        email: 'bossman@example.com'
+      }
+    }
+  };
+
   describe('modalDisplayReducer', () => {
     it('Should accept and return modalDisplay initial state.', () => {
       expect(modalDisplayReducer(initialStateModal, { type: null })).toEqual(initialStateModal);
@@ -46,14 +70,10 @@ describe('Add User App', () => {
 
   });
 
-  // describe('rootReducer', () => {
-  //   it('Should accept and return initial state.', () => {
-  //     expect(rootReducer(initialState, { type: null })).toEqual(initialState);
-  //   });
-
-    // it('Should contain logic from both reducers.', () => {
-    //   expect(store.getState().modalDisplay.toEqual(modalDisplayReducer(undefined, { type: null }));
-    // });
-  // });
+  describe('rootReducer', () => {
+    it('Should accept and return initial state.', () => {
+      expect(rootReducer(initialStateModal, { type: null })).toEqual(initialStateModal);
+    });
+  });
 
 });
