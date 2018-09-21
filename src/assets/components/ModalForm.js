@@ -1,7 +1,8 @@
 import React from 'react';
 import { DialogContent, TextField } from '@material-ui/core/';
+import PropTypes from 'prop-types';
 
-function ModalForm() {
+function ModalForm(props) {
   return (
     <DialogContent>
       <TextField
@@ -10,6 +11,7 @@ function ModalForm() {
         id="first-name"
         label="First Name"
         type="text"
+        value={props.firstName}
         fullWidth
         required
         />
@@ -19,6 +21,7 @@ function ModalForm() {
         id="last-name"
         label="Last Name"
         type="text"
+        value={props.lastName}
         fullWidth
         required
       />
@@ -28,11 +31,18 @@ function ModalForm() {
         id="name"
         label="Email Address"
         type="email"
+        value={props.email}
         fullWidth
         required
       />
     </DialogContent>
   );
 }
+
+ModalForm.propTypes = {
+  firstName: PropTypes.string,
+  lastName: PropTypes.string,
+  email: PropTypes.string
+};
 
 export default ModalForm;
