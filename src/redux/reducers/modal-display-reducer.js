@@ -10,7 +10,7 @@ function modalDisplayReducer(state = initialState, action) {
     case c.OPEN_MODAL:
       return Object.assign({}, state, { modalDisplay: action.payload });
     case c.CLOSE_MODAL:
-      return Object.assgin({}, state, { modalDisplay: action.payload });
+      return Object.assign({}, state, { modalDisplay: action.payload });
     default:
       return state;
   }
