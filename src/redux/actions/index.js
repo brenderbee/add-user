@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import constants from './../constants';
-import * as types from "./../constants/ActionTypes";
+import * as types from './../constants/actionTypes';
 
 const { firebaseConfig } = constants;
 
