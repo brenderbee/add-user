@@ -1,16 +1,12 @@
 import constants from './../constants';
 const { c } = constants;
 
-const initialState ={
-  modalDisplay: false
-}
-
-function modalDisplayReducer(state = initialState, action) {
+function modalDisplayReducer(state = {}, action) {
   switch(action.type) {
     case c.OPEN_MODAL:
-      return Object.assign({}, state, { modalDisplay: action.payload });
+      return true;
     case c.CLOSE_MODAL:
-      return Object.assign({}, state, { modalDisplay: action.payload });
+      return false;
     default:
       return state;
   }
