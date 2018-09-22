@@ -1,5 +1,3 @@
-import { createStore } from 'redux';
-import constants from "./redux/constants";
 import modalDisplayReducer from './redux/reducers/modal-display-reducer';
 import rootReducer from './redux/reducers/';
 
