@@ -59,11 +59,11 @@ describe('Add User App', () => {
     });
 
     it('Should change intial state of modalDisplay to true.', () => {
-      expect(modalDisplayReducer(initialStateModal, { type: 'OPEN_MODAL', payload: true })).toEqual({ modalDisplay: true });
+      expect(modalDisplayReducer(initialStateModal, { type: 'OPEN_MODAL', payload: true })).toEqual(true);
     });
 
     it('Should change state of modalDisplay to false.', () => {
-      expect(modalDisplayReducer(initialStateModal, { type: 'CLOSE_MODAL', payload: false })).toEqual({ modalDisplay: false });
+      expect(modalDisplayReducer(initialStateModal, { type: 'CLOSE_MODAL', payload: false })).toEqual(false);
     });
 
   });
