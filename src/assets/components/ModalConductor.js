@@ -10,9 +10,9 @@ function ModalConductor(props) {
         <Modal
           open={true}
           dialogTitle="Add User"
-          firstName={null}
-          lastName={null}
-          email={null}
+          firstName=""
+          lastName=""
+          email=""
         />
       );
     case 'EDIT_USER':
@@ -29,6 +29,10 @@ function ModalConductor(props) {
       return (
         <Modal
           open={false}
+          dialogTitle=""
+          firstName=""
+          lastName=""
+          email=""
         />
       );
   }
