@@ -62,6 +62,10 @@ describe('Add User App', () => {
       expect(currentModalReducer(initialStateModal, { type: 'ADD_USER', payload: 'ADD_USER' })).toEqual('ADD_USER');
     });
 
+    it('Should change intial state of currentModalReducer to "EDIT_USER".', () => {
+      expect(currentModalReducer(initialStateModal, { type: 'EDIT_USER', payload: 'EDIT_USER' })).toEqual('EDIT_USER');
+    });
+
     it('Should change state of currentModalReducer to null.', () => {
       expect(currentModalReducer(initialStateModal, { type: 'CLOSE_MODAL', payload: '' })).toEqual('');
     });
