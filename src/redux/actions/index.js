@@ -13,6 +13,13 @@ export function openAddModal() {
   }
 }
 
+export function openEditModal() {
+  return {
+    type: types.EDIT_USER,
+    payload: 'EDIT_USER'
+  }
+}
+
 export function closeModal() {
   return {
     type: types.CLOSE_MODAL,
