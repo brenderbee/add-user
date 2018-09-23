@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Modal } from './';
 
 function ModalConductor(props) {
-  switch ('props.currentModal') {
+  switch (props.currentModal) {
     case 'ADD_USER':
       return (
         <Modal
