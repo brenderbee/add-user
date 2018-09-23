@@ -28,7 +28,7 @@ function AddUser(props) {
 }
 
 const mapStateToProps = state => ({
-  currentModal: AddUser(state.currentModal)
+  currentModal: state.currentModal
 });
 
 const mapDispatchToProps = dispatch => ({
