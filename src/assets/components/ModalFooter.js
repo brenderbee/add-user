@@ -26,7 +26,6 @@ function ModalFooter(props) {
 }
 
 ModalFooter.propTypes = {
-  currentModal: PropTypes.string,
   sendCloseModal: PropTypes.func
 }
 
