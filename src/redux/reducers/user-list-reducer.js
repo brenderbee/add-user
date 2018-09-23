@@ -1,17 +1,15 @@
 import constants from './../constants';
-import firebase from 'firebase';
-import constants from './../constants';
+// const { c } = constants;
 
-const { firebaseConfig } = constants;
-const { c } = constants;
+// import firebase from 'firebase';
+// const { firebaseConfig } = constants;
 
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
+// const initialState ={
+//   masterUserList: firebase.database().ref('users').once('value').then((snapshot)=> snapshot.val())
+// }
 
-const initialState ={
-  masterUserList: firebase.database().ref('users').once('value').then((snapshot)=> snapshot.val())
-}
-
-function userListReducer(state = initialState, action) {
+function userListReducer(state = {}, action) {
   switch(action.type) {
     default:
       return state;
