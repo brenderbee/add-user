@@ -16,6 +16,6 @@ export function openAddModal() {
 export function closeModal() {
   return {
     type: types.CLOSE_MODAL,
-    payload: null
+    payload: ''
   }
 }
