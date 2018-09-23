@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Modal } from './';
 
 function ModalConductor(props) {
-  switch (props.currentModal) {
+  switch ('props.currentModal') {
     case 'ADD_USER':
       return (
         <Modal
@@ -38,4 +39,8 @@ ModalConductor.propTypes = {
   currentUser: PropTypes.object
 };
 
-export default ModalConductor;
+const mapStateToProps = state => ({
+  currentModal: state.currentModal
+})
+
+export default connect(mapStateToProps)(ModalConductor);
