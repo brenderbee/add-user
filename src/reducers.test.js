@@ -1,4 +1,5 @@
 import currentModalReducer from './redux/reducers/current-modal-reducer';
+import userListReducer from './redux/reducers/current-modal-reducer';
 import rootReducer from './redux/reducers/';
 
 describe('Add User App', () => {
@@ -72,9 +73,15 @@ describe('Add User App', () => {
 
   });
 
+  describe('userListReducer', () => {
+    it('Should accept and return userListReducer initial state.', () => {
+      expect(userListReducer(initialStateUserList, { type: null })).toEqual(initialStateUserList);
+    });
+  });
+
   describe('rootReducer', () => {
     it('Should accept and return initial state.', () => {
-      expect(rootReducer(initialStateModal, { type: null })).toEqual(initialStateModal);
+      expect(rootReducer(initialState, { type: null })).toEqual(initialState);
     });
   });
 
