@@ -3,7 +3,7 @@ import { Tooltip, Button } from '@material-ui/core/';
 import AddIcon from '@material-ui/icons/Add';
 import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
-import { openModal } from './../../redux/actions';
+import { openAddModal } from './../../redux/actions';
 
 function AddUser(props) {
   const handleOpenAddModal = () => {
@@ -32,11 +32,11 @@ AddUser.proptypes = {
 }
 
 const mapStateToProps = state => ({
-  currentModal: AddUser(state.modalDisplay)
+  currentModal: AddUser(state.currentModal)
 });
 
 const mapDispatchToProps = dispatch => ({
-  sendOpenModal: () => dispatch(openModal())
+  sendOpenModal: () => dispatch(openAddModal())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddUser);
