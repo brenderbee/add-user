@@ -6,7 +6,7 @@ function currentModalReducer(state = {}, action) {
     case c.ADD_USER:
       return 'ADD_USER';
     case c.CLOSE_MODAL:
-      return null;
+      return '';
     default:
       return state;
   }
