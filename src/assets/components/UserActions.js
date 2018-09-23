@@ -11,6 +11,7 @@ function UserActions(props) {
   const handleOpenEditModal = () => {
     props.sendOpenEditModal();
   }
+  
   return (
     <div>
       <Button

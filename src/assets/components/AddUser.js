@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { openAddModal } from './../../redux/actions';
 
 function AddUser(props) {
+  
   const handleOpenAddModal = () => {
     props.sendOpenModal();
   }
