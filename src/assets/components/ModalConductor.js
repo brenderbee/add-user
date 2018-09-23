@@ -35,8 +35,7 @@ function ModalConductor(props) {
 }
 
 ModalConductor.propTypes = {
-  currentModal: PropTypes.string,
-  currentUser: PropTypes.object
+  currentModal: PropTypes.string
 };
 
 const mapStateToProps = state => ({
