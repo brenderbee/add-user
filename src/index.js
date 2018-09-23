@@ -6,7 +6,8 @@ import App from './App';
 import rootReducer from './redux/reducers';
 
 const store = createStore(rootReducer, {
-  modalDisplay: false
+  modalDisplay: false,
+  currentModal: null
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 console.log(store.getState())
