@@ -58,9 +58,9 @@ describe('Add User App', () => {
       expect(currentModalReducer(initialStateModal, { type: null })).toEqual(initialStateModal);
     });
 
-    // it('Should change intial state of currentModalReducer to true.', () => {
-    //   expect(currentModalReducer(initialStateModal, { type: 'ADD_USER', payload: true })).toEqual('ADD_USER');
-    // });
+    it('Should change intial state of currentModalReducer to true.', () => {
+      expect(currentModalReducer(initialStateModal, { type: 'ADD_USER', payload: true })).toEqual('ADD_USER');
+    });
 
     // it('Should change state of modalDisplay to false.', () => {
     //   expect(currentModalReducer(initialStateModal, { type: 'CLOSE_MODAL', payload: false })).toEqual(false);
