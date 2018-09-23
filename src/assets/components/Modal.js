@@ -6,7 +6,7 @@ import { ModalFooter, ModalForm } from './';
 function Modal(props) {
   return (
     <Dialog open={props.open}>
-      <DialogTitle id="form-dialog-title">{props.Title}</DialogTitle>
+      <DialogTitle id="form-dialog-title">{props.dialogTitle}</DialogTitle>
       <ModalForm
         firstName={props.firstName}
         lastName={props.lastName}
