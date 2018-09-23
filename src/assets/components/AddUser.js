@@ -1,7 +1,6 @@
 import React from 'react';
 import { Tooltip, Button } from '@material-ui/core/';
 import AddIcon from '@material-ui/icons/Add';
-import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
 import { openAddModal } from './../../redux/actions';
 
@@ -25,10 +24,6 @@ function AddUser(props) {
       </Tooltip>
     </div>
   );
-}
-
-AddUser.proptypes = {
-  currentModal: Proptypes.string
 }
 
 const mapStateToProps = state => ({
