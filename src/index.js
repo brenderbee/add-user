@@ -8,7 +8,7 @@ import { jsonResponse } from './tempData';
 
 const store = createStore(rootReducer, {
   currentModal: null,
-  userList: jsonResponse.users
+  masterUserList: jsonResponse.users
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 render(
