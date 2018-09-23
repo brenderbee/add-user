@@ -1,4 +1,4 @@
-{
+const jsonResponse = {
   "users": {
     "77182080-bdaa-11e8-b568-0800200c9a66": {
       "id": "77182080-bdaa-11e8-b568-0800200c9a66",
@@ -31,4 +31,6 @@
       "email": "rarnold@example.com"
     }
   }
-}
+};
+
+export { jsonResponse };
