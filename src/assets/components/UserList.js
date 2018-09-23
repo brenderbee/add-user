@@ -3,18 +3,15 @@ import { List } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import { User } from './';
-import { jsonResponse } from './../../tempData';
-
-const users = jsonResponse.users;
 
 function UserList(props) {
   return (
     <List>
-      {Object.keys(users).map((user) =>
+      {Object.keys(props.masterUserList).map((user) =>
         <User
-          lastName={users[user].last_name}
-          firstName={users[user].first_name}
-          email={users[user].email}
+          lastName={props.masterUserList[user].last_name}
+          firstName={props.masterUserList[user].first_name}
+          email={props.masterUserList[user].email}
           key={v4()}
         />
       )}
@@ -23,7 +20,7 @@ function UserList(props) {
 }
 
 const mapStateToProps = state => ({
-  masterUserList: UserList(state.masterUserList)
+  masterUserList: state.masterUserList
 });
 
 export default connect(mapStateToProps)(UserList);
