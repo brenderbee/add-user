@@ -6,16 +6,9 @@ const { firebaseConfig } = constants;
 
 firebase.initializeApp(firebaseConfig);
 
-export function openModal() {
+export function openAddModal() {
   return {
-    type: types.OPEN_MODAL,
-    payload: true
-  }
-}
-
-export function closeModal() {
-  return {
-    type: types.CLOSE_MODAL,
-    payload: false
+    type: types.ADD_USER,
+    payload: 'ADD_USER'
   }
 }
