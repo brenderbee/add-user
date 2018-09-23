@@ -1,7 +1,7 @@
 import constants from './../constants';
 const { c } = constants;
 
-function modalDisplayReducer(state = {}, action) {
+function currentModalReducer(state = {}, action) {
   switch(action.type) {
     case c.OPEN_MODAL:
       return true;
@@ -12,4 +12,4 @@ function modalDisplayReducer(state = {}, action) {
   }
 }
 
-export default modalDisplayReducer;
+export default currentModalReducer;

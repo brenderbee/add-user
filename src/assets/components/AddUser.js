@@ -7,7 +7,7 @@ import { openModal } from './../../redux/actions';
 
 function AddUser(props) {
   const handleOpenAddModal = () => {
-    props.modalDisplay();
+    props.sendOpenModal();
   }
 
   return (
@@ -28,15 +28,15 @@ function AddUser(props) {
 }
 
 AddUser.proptypes = {
-  modalDisplay: Proptypes.bool
+  currentModal: Proptypes.string
 }
 
 const mapStateToProps = state => ({
-  modalDisplay: AddUser(state.modalDisplay)
+  currentModal: AddUser(state.modalDisplay)
 });
 
 const mapDispatchToProps = dispatch => ({
-  modalDisplay: () => dispatch(openModal())
+  sendOpenModal: () => dispatch(openModal())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddUser);

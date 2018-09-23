@@ -1,9 +1,9 @@
-import modalDisplayReducer from './redux/reducers/modal-display-reducer';
+import currentModalReducer from './redux/reducers/current-modal-reducer';
 import rootReducer from './redux/reducers/';
 
 describe('Add User App', () => {
   const initialStateModal = {
-    modalDisplay: false
+    currentModal: false
   };
 
   const initialStateUserList = {
@@ -30,7 +30,7 @@ describe('Add User App', () => {
   };
 
   const initialState = {
-    modalDisplay: false,
+    currentModal: false,
     masterUserList: {
       random: {
         id: '0',
@@ -53,17 +53,17 @@ describe('Add User App', () => {
     }
   };
 
-  describe('modalDisplayReducer', () => {
-    it('Should accept and return modalDisplay initial state.', () => {
+  describe('currentModalReducer', () => {
+    it('Should accept and return currentModalReducer initial state.', () => {
       expect(modalDisplayReducer(initialStateModal, { type: null })).toEqual(initialStateModal);
     });
 
-    it('Should change intial state of modalDisplay to true.', () => {
-      expect(modalDisplayReducer(initialStateModal, { type: 'OPEN_MODAL', payload: true })).toEqual(true);
+    it('Should change intial state of currentModalReducer to true.', () => {
+      expect(currentModalReducer(initialStateModal, { type: 'OPEN_MODAL', payload: true })).toEqual(true);
     });
 
     it('Should change state of modalDisplay to false.', () => {
-      expect(modalDisplayReducer(initialStateModal, { type: 'CLOSE_MODAL', payload: false })).toEqual(false);
+      expect(currentModalReducer(initialStateModal, { type: 'CLOSE_MODAL', payload: false })).toEqual(false);
     });
 
   });
