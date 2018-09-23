@@ -7,7 +7,7 @@ import rootReducer from './redux/reducers';
 import { jsonResponse } from './tempData';
 
 const store = createStore(rootReducer, {
-  currentModal: null,
+  currentModal: '',
   masterUserList: jsonResponse.users
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
