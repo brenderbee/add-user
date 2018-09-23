@@ -25,7 +25,7 @@ function ModalFooter(props) {
 }
 
 const mapStateToProps = state => ({
-  currentModal: ModalFooter(state.currentModal)
+  currentModal: state.currentModal
 });
 
 const mapDispatchToProps = dispatch => ({
