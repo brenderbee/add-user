@@ -3,10 +3,8 @@ const { c } = constants;
 
 function currentModalReducer(state = {}, action) {
   switch(action.type) {
-    case c.OPEN_MODAL:
-      return true;
-    case c.CLOSE_MODAL:
-      return false;
+    case c.ADD_USER:
+      return 'ADD_USER';
     default:
       return state;
   }
