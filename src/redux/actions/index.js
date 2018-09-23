@@ -12,3 +12,10 @@ export function openAddModal() {
     payload: 'ADD_USER'
   }
 }
+
+export function closeModal() {
+  return {
+    type: types.CLOSE_MODAL,
+    payload: null
+  }
+}
