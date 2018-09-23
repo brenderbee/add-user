@@ -63,7 +63,7 @@ describe('Add User App', () => {
     });
 
     it('Should change state of currentModalReducer to null.', () => {
-      expect(currentModalReducer(initialStateModal, { type: 'CLOSE_MODAL', payload: null })).toEqual(null);
+      expect(currentModalReducer(initialStateModal, { type: 'CLOSE_MODAL', payload: '' })).toEqual('');
     });
 
   });
