@@ -14,12 +14,12 @@ function ModalForm(props) {
           inputLast = event.target.querySelector('#last-name').value.trim(),
           inputEmail = event.target.querySelector('#email').value.trim(),
           newId = v4();
-    props.sendNewUser({[newId]:{
+    props.sendNewUser({
       first_name: inputFirst,
       last_name: inputLast,
       email: inputEmail,
       id: newId
-    }});
+    });
     props.sendCloseModal();
   }
 
