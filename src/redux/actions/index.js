@@ -34,3 +34,7 @@ export const fetchUsers = () => async dispatch => {
     });
   });
 };
+
+export const addUser = newUser => async dispatch => {
+  usersRef.push().set(newUser);
+};
