@@ -1,4 +1,5 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 import { List } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
@@ -17,6 +18,10 @@ function UserList(props) {
       )}
     </List>
   );
+}
+
+UserList.proptypes = {
+  masterUserList: Proptypes.object
 }
 
 const mapStateToProps = state => ({

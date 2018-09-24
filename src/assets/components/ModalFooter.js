@@ -1,4 +1,5 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 import { Button, DialogActions } from '@material-ui/core/';
 import { connect } from 'react-redux';
 import { closeModal } from './../../redux/actions';
@@ -22,6 +23,11 @@ function ModalFooter(props) {
       </Button>
     </DialogActions>
   );
+}
+
+ModalFooter.proptypes = {
+  currentModal: Proptypes.string,
+  sendCloseModal: Proptypes.func
 }
 
 const mapStateToProps = state => ({
