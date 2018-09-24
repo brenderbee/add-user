@@ -2,11 +2,16 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import { Button, DialogActions } from '@material-ui/core/';
 import { connect } from 'react-redux';
-import { closeModal } from './../../redux/actions';
+import { closeModal, addUser } from './../../redux/actions';
 
 function ModalFooter(props) {
 
   const handleCloseModal = () => {
+    props.sendCloseModal();
+  }
+
+  const handleAddUser = () => {
+    props.sendNewUser({email: 'hello'});
     props.sendCloseModal();
   }
 
@@ -18,7 +23,10 @@ function ModalFooter(props) {
       >
         Cancel
       </Button>
-      <Button color="primary">
+      <Button
+        onClick={handleAddUser}
+        color="primary"
+      >
         Add
       </Button>
     </DialogActions>
@@ -35,7 +43,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  sendCloseModal: () => dispatch(closeModal())
+  sendCloseModal: () => dispatch(closeModal()),
+  sendNewUser: (newUser) => dispatch(addUser(newUser))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ModalFooter);
