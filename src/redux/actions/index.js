@@ -1,4 +1,12 @@
+import firebase from 'firebase';
 import * as types from './../constants/actionTypes';
+import constants from './../constants';
+const { firebaseConfig } = constants;
+
+firebase.initializeApp(firebaseConfig);
+
+const databaseRef = firebase.database();
+const usersRef = databaseRef.ref('users');
 
 export function openAddModal() {
   return {
@@ -17,3 +25,12 @@ export function closeModal() {
     type: types.CLOSE_MODAL
   }
 }
+
+export const fetchUsers = () => async dispatch => {
+  usersRef.on('value', snapshot => {
+    dispatch({
+      type: types.FETCH_USERS,
+      payload: snapshot.val()
+    });
+  });
+};
