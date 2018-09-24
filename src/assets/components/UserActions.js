@@ -44,19 +44,12 @@ function UserActions(props) {
 }
 
 UserActions.proptypes = {
-  currentModal: Proptypes.string,
-  masterUserList: Proptypes.object,
   currentUser: Proptypes.object
 }
-
-const mapStateToProps = state => ({
-  currentModal: state.currentModal,
-  masterUserList: state.masterUserList
-});
 
 const mapDispatchToProps = dispatch => ({
   sendOpenEditModal: () => dispatch(openEditModal()),
   sendDeleteUser: (userId) => dispatch(deleteUser(userId))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserActions);
+export default connect(null, mapDispatchToProps)(UserActions);
