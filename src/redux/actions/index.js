@@ -1,10 +1,4 @@
-import firebase from 'firebase';
-import constants from './../constants';
 import * as types from './../constants/actionTypes';
-
-const { firebaseConfig } = constants;
-
-firebase.initializeApp(firebaseConfig);
 
 export function openAddModal() {
   return {
