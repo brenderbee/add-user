@@ -16,7 +16,7 @@ function User(props) {
           primary={props.lastName + ', ' + props.firstName}
           secondary={props.email}
         />
-        <UserActions />
+      <UserActions currentUserId={props.currentUserId}/>
       </ListItem>
       <Divider />
     </Fragment>
@@ -27,6 +27,7 @@ User.proptypes = {
   firstName: Proptypes.string,
   lastName: Proptypes.string,
   email: Proptypes.string,
+  currentUserId: Proptypes.string
 }
 
 export default User;
