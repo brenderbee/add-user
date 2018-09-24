@@ -1,31 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Proptypes from 'prop-types';
 import { List } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import { User } from './';
+import { fetchUsers } from './../../redux/actions';
 
-function UserList(props) {
-  return (
-    <List>
-      {Object.keys(props.masterUserList).map((user) =>
-        <User
-          lastName={props.masterUserList[user].last_name}
-          firstName={props.masterUserList[user].first_name}
-          email={props.masterUserList[user].email}
-          key={v4()}
-        />
-      )}
-    </List>
-  );
+class UserList extends Component {
+  componentWillMount(){
+    this.props.fetchUsers();
+  }
+
+  render() {
+    return (
+      <List>
+        {Object.keys(this.props.masterUserList).map((user) =>
+          <User
+            lastName={this.props.masterUserList[user].last_name}
+            firstName={this.props.masterUserList[user].first_name}
+            email={this.props.masterUserList[user].email}
+            key={v4()}
+          />
+        )}
+      </List>
+    );
+  }
 }
 
 UserList.proptypes = {
-  masterUserList: Proptypes.object
+  masterUserList: Proptypes.object,
+  fetchUsers: Proptypes.func
 }
 
 const mapStateToProps = state => ({
   masterUserList: state.masterUserList
 });
 
-export default connect(mapStateToProps)(UserList);
+const mapDispatchToProps = dispatch => ({
+  fetchUsers: () => dispatch(fetchUsers())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserList);
