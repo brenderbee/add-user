@@ -29,16 +29,11 @@ function AddUser(props) {
 }
 
 AddUser.proptypes = {
-  currentModal: Proptypes.string,
   sendOpenModal: Proptypes.func
 }
-
-const mapStateToProps = state => ({
-  currentModal: state.currentModal
-});
 
 const mapDispatchToProps = dispatch => ({
   sendOpenModal: () => dispatch(openAddModal())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddUser);
+export default connect(null, mapDispatchToProps)(AddUser);
