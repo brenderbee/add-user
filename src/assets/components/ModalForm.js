@@ -19,7 +19,7 @@ function ModalForm(props) {
       last_name: inputLast,
       email: inputEmail,
       id: newId
-    });
+    }, newId);
     props.sendCloseModal();
   }
 
@@ -64,7 +64,7 @@ ModalForm.propTypes = {
 
 const mapDispatchToProps = dispatch => ({
   sendCloseModal: () => dispatch(closeModal()),
-  sendNewUser: (newUser) => dispatch(addUser(newUser))
+  sendNewUser: (newUser, newUserId) => dispatch(addUser(newUser, newUserId))
 });
 
 export default connect(null, mapDispatchToProps)(ModalForm);
