@@ -9,7 +9,14 @@ function ModalForm(props) {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    props.sendNewUser({email: 'hello'});
+    const inputFirst = event.target.querySelector('#first-name').value.trim();
+    const inputLast = event.target.querySelector('#last-name').value.trim();
+    const inputEmail = event.target.querySelector('#email').value.trim();
+    props.sendNewUser({
+      first_name: inputFirst,
+      last_name: inputLast,
+      email: inputEmail
+    });
     props.sendCloseModal();
   }
 
@@ -22,7 +29,6 @@ function ModalForm(props) {
           id="first-name"
           label="First Name"
           type="text"
-          value={props.firstName}
           fullWidth
         />
         <TextField
@@ -31,16 +37,14 @@ function ModalForm(props) {
           id="last-name"
           label="Last Name"
           type="text"
-          value={props.lastName}
           fullWidth
         />
         <TextField
           autoFocus
           margin="normal"
-          id="name"
+          id="email"
           label="Email Address"
           type="email"
-          value={props.email}
           fullWidth
         />
         <ModalFooter onFormSubmit={handleFormSubmit}/>
