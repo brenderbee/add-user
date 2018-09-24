@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dialog, DialogTitle } from '@material-ui/core/';
 import PropTypes from 'prop-types';
-import { ModalFooter, ModalForm } from './';
+import { ModalForm } from './';
 
 function Modal(props) {
   return (
@@ -12,7 +12,6 @@ function Modal(props) {
         lastName={props.lastName}
         email={props.email}
       />
-      <ModalFooter />
     </Dialog>
   );
 }
