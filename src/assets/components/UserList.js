@@ -20,7 +20,7 @@ class UserList extends Component {
             firstName={this.props.masterUserList[user].first_name}
             email={this.props.masterUserList[user].email}
             key={v4()}
-            currentUserId={this.props.masterUserList[user].id}
+            currentUser={this.props.masterUserList[user]}
           />
         )}
       </List>
