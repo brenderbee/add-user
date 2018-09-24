@@ -3,6 +3,8 @@ const { c } = constants;
 
 function userListReducer(state = {}, action) {
   switch(action.type) {
+    case c.NEW_USER:
+      return action.payload
     case c.FETCH_USERS:
       return action.payload;
     default:
