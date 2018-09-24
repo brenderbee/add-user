@@ -2,6 +2,7 @@ import React from 'react';
 import { DialogContent, TextField } from '@material-ui/core/';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { v4 } from 'uuid';
 import { ModalFooter } from './';
 import { closeModal, addUser } from './../../redux/actions';
 
@@ -9,14 +10,16 @@ function ModalForm(props) {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    const inputFirst = event.target.querySelector('#first-name').value.trim();
-    const inputLast = event.target.querySelector('#last-name').value.trim();
-    const inputEmail = event.target.querySelector('#email').value.trim();
-    props.sendNewUser({
+    const inputFirst = event.target.querySelector('#first-name').value.trim(),
+          inputLast = event.target.querySelector('#last-name').value.trim(),
+          inputEmail = event.target.querySelector('#email').value.trim(),
+          newId = v4();
+    props.sendNewUser({[newId]:{
       first_name: inputFirst,
       last_name: inputLast,
-      email: inputEmail
-    });
+      email: inputEmail,
+      id: newId
+    }});
     props.sendCloseModal();
   }
 
