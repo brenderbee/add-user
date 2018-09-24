@@ -38,3 +38,7 @@ export const fetchUsers = () => async dispatch => {
 export const addUser = newUser => async dispatch => {
   usersRef.push().set(newUser);
 };
+
+export const deleteUser = currentUser => async dispatch => {
+  usersRef.child(currentUser).remove();
+};
