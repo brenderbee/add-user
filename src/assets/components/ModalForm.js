@@ -33,6 +33,7 @@ function ModalForm(props) {
           label="First Name"
           type="text"
           fullWidth
+          required
         />
         <TextField
           margin="normal"
@@ -40,6 +41,7 @@ function ModalForm(props) {
           label="Last Name"
           type="text"
           fullWidth
+          required
         />
         <TextField
           margin="normal"
@@ -47,6 +49,7 @@ function ModalForm(props) {
           label="Email Address"
           type="email"
           fullWidth
+          required
         />
         <ModalFooter onFormSubmit={handleFormSubmit}/>
       </form>
