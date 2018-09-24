@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { orderBy } from 'lodash';
 import * as types from './../constants/actionTypes';
 import constants from './../constants';
 const { firebaseConfig } = constants;
@@ -30,7 +31,7 @@ export const fetchUsers = () => async dispatch => {
   usersRef.on('value', snapshot => {
     dispatch({
       type: types.FETCH_USERS,
-      payload: snapshot.val()
+      payload: orderBy(snapshot.val(), 'last_name', 'asc')
     });
   });
 };
