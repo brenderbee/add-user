@@ -35,7 +35,6 @@ function ModalForm(props) {
           fullWidth
         />
         <TextField
-          autoFocus
           margin="normal"
           id="last-name"
           label="Last Name"
@@ -43,7 +42,6 @@ function ModalForm(props) {
           fullWidth
         />
         <TextField
-          autoFocus
           margin="normal"
           id="email"
           label="Email Address"
