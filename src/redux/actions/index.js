@@ -35,10 +35,10 @@ export const fetchUsers = () => async dispatch => {
   });
 };
 
-export const addUser = newUser => async dispatch => {
-  usersRef.push().set(newUser);
+export const addUser = (newUser, newUserId) => async dispatch => {
+  usersRef.child(newUserId).set(newUser);
 };
 
-export const deleteUser = currentUser => async dispatch => {
-  usersRef.child(currentUser).remove();
+export const deleteUser = currentUserId => async dispatch => {
+  usersRef.child(currentUserId).remove();
 };
