@@ -62,14 +62,9 @@ ModalForm.propTypes = {
   email: PropTypes.string
 };
 
-const mapStateToProps = state => ({
-  currentModal: state.currentModal,
-  masterUserList: state.masterUserList
-});
-
 const mapDispatchToProps = dispatch => ({
   sendCloseModal: () => dispatch(closeModal()),
   sendNewUser: (newUser) => dispatch(addUser(newUser))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ModalForm);
+export default connect(null, mapDispatchToProps)(ModalForm);
