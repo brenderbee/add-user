@@ -20,9 +20,9 @@ function ModalConductor(props) {
         <Modal
           open={true}
           dialogTitle="Edit User"
-          firstName="first"
-          lastName="last"
-          email="test@example.com"
+          firstName={props.currentUser.first_name}
+          lastName={props.currentUser.last_name}
+          email={props.currentUser.email}
         />
       );
     default:
@@ -39,11 +39,13 @@ function ModalConductor(props) {
 }
 
 ModalConductor.propTypes = {
-  currentModal: PropTypes.string
+  currentModal: PropTypes.string,
+  currentUser: PropTypes.object
 };
 
 const mapStateToProps = state => ({
-  currentModal: state.currentModal
+  currentModal: state.currentModal,
+  currentUser: state.currentUser
 })
 
 export default connect(mapStateToProps)(ModalConductor);
