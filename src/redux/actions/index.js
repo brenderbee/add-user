@@ -51,6 +51,13 @@ export function setCurrentUser(selectedUser) {
   }
 }
 
+export function resetCurrentUser() {
+  return {
+    type: types.SET_USER,
+    payload: {}
+  }
+}
+
 export const updateUser = (updatedUser, userId) => async dispatch => {
   usersRef.child(userId).update(updatedUser);
 };
