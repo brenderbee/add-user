@@ -2,12 +2,13 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import { Button, DialogActions } from '@material-ui/core/';
 import { connect } from 'react-redux';
-import { closeModal } from './../../redux/actions';
+import { closeModal, resetCurrentUser } from './../../redux/actions';
 
 function ModalFooter(props) {
 
   const handleCloseModal = () => {
     props.sendCloseModal();
+    props.sendResetUser();
   }
 
   const renderActionText = () => {
@@ -51,6 +52,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   sendCloseModal: () => dispatch(closeModal()),
+  sendResetUser: () => dispatch(resetCurrentUser())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ModalFooter);
