@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import { ModalFooter } from './';
-import { closeModal, addUser } from './../../redux/actions';
+import { closeModal, addUser, updateUser } from './../../redux/actions';
 
 function ModalForm(props) {
 
@@ -14,12 +14,21 @@ function ModalForm(props) {
           inputLast = event.target.querySelector('#last-name').value.trim(),
           inputEmail = event.target.querySelector('#email').value.trim(),
           newId = v4();
-    props.sendNewUser({
-      first_name: inputFirst,
-      last_name: inputLast,
-      email: inputEmail,
-      id: newId
-    }, newId);
+    if (props.currentModal === 'EDIT_USER') {
+      props.sendUpdatedUser({
+        first_name: inputFirst,
+        last_name: inputLast,
+        email: inputEmail,
+        id: props.currentUser.id
+      }, props.currentUser.id);
+    } else {
+      props.sendNewUser({
+        first_name: inputFirst,
+        last_name: inputLast,
+        email: inputEmail,
+        id: newId
+      }, newId);
+    }
     props.sendCloseModal();
   }
 
@@ -63,12 +72,19 @@ function ModalForm(props) {
 ModalForm.propTypes = {
   firstName: PropTypes.string,
   lastName: PropTypes.string,
-  email: PropTypes.string
+  email: PropTypes.string,
+  currentModal: PropTypes.string
 };
+
+const mapStateToProps = state => ({
+  currentModal: state.currentModal,
+  currentUser: state.currentUser
+});
 
 const mapDispatchToProps = dispatch => ({
   sendCloseModal: () => dispatch(closeModal()),
-  sendNewUser: (newUser, newUserId) => dispatch(addUser(newUser, newUserId))
+  sendNewUser: (newUser, newUserId) => dispatch(addUser(newUser, newUserId)),
+  sendUpdatedUser: (updatedUser, userId) => dispatch(updateUser(updatedUser, userId))
 });
 
-export default connect(null, mapDispatchToProps)(ModalForm);
+export default connect(mapStateToProps, mapDispatchToProps)(ModalForm);

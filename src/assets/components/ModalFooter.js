@@ -15,7 +15,7 @@ function ModalFooter(props) {
     if (props.currentModal === 'ADD_USER') {
       return 'add';
     } else if ( props.currentModal === 'EDIT_USER') {
-      return 'edit';
+      return 'update';
     } else {
       return '';
     }
