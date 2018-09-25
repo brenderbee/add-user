@@ -36,7 +36,8 @@ describe('Add User App', () => {
   };
 
   const initialState = {
-    currentModal: null,
+    currentModal: '',
+    currentUser: {},
     masterUserList: {
       random: {
         id: '0',
@@ -88,12 +89,16 @@ describe('Add User App', () => {
     it('Should accept and return userListReducer initial state.', () => {
       expect(currentUserReducer(initialStateUser, { type: null })).toEqual(initialStateUser);
     });
+
+    it('Should change intial state of currentUserReducer to a new object.', () => {
+      expect(currentUserReducer(initialStateUser, { type: 'SET_USER', payload: { last_name: 'franco', first_name: 'Ramiro'} })).toEqual({ last_name: 'franco', first_name: 'Ramiro'});
+    });
   });
 
-  // describe('rootReducer', () => {
-  //   it('Should accept and return initial state.', () => {
-  //     expect(rootReducer(initialState, { type: null })).toEqual(initialState);
-  //   });
-  // });
+  describe('rootReducer', () => {
+    it('Should accept and return initial state.', () => {
+      expect(rootReducer(initialState, { type: null })).toEqual(initialState);
+    });
+  });
 
 });
