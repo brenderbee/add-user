@@ -5,12 +5,13 @@ import { Button } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import './../css/UserActions.css';
-import { openEditModal, deleteUser } from './../../redux/actions';
+import { openEditModal, deleteUser, setCurrentUser } from './../../redux/actions';
 
 function UserActions(props) {
 
   const handleOpenEditModal = () => {
     props.sendOpenEditModal();
+    props.sendCurrentUser(props.currentUser);
   }
 
   const handleDeleteUser = () => {
@@ -49,7 +50,8 @@ UserActions.proptypes = {
 
 const mapDispatchToProps = dispatch => ({
   sendOpenEditModal: () => dispatch(openEditModal()),
-  sendDeleteUser: (userId) => dispatch(deleteUser(userId))
+  sendDeleteUser: (userId) => dispatch(deleteUser(userId)),
+  sendCurrentUser: (user) => dispatch(setCurrentUser(user))
 });
 
 export default connect(null, mapDispatchToProps)(UserActions);
