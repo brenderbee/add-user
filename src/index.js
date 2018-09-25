@@ -11,7 +11,8 @@ const store = createStore(
   rootReducer,
   {
     currentModal: '',
-    masterUserList: {}
+    masterUserList: {},
+    currentUser: {}
   },
   composeEnhancers(applyMiddleware(reduxThunk))
 );
