@@ -43,3 +43,14 @@ export const addUser = (newUser, newUserId) => async dispatch => {
 export const deleteUser = currentUserId => async dispatch => {
   usersRef.child(currentUserId).remove();
 };
+
+export function setCurrentUser(selectedUser) {
+  return {
+    type: types.SET_USER,
+    payload: selectedUser
+  }
+}
+
+export const updateUser = (updatedUser, userId) => async dispatch => {
+  usersRef.child(userId).update(updatedUser);
+};
