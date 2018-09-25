@@ -32,7 +32,7 @@ function ModalForm(props) {
           id="first-name"
           label="First Name"
           type="text"
-          value={props.firstName}
+          defaultValue={props.firstName}
           fullWidth
           required
         />
@@ -41,7 +41,7 @@ function ModalForm(props) {
           id="last-name"
           label="Last Name"
           type="text"
-          value={props.lastName}
+          defaultValue={props.lastName}
           fullWidth
           required
         />
@@ -50,7 +50,7 @@ function ModalForm(props) {
           id="email"
           label="Email Address"
           type="email"
-          value={props.email}
+          defaultValue={props.email}
           fullWidth
           required
         />
