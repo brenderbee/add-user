@@ -4,7 +4,7 @@ import { List } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import { User } from './';
-import { fetchUsers } from './../../redux/actions';
+import { fetchUsers } from './../../actions';
 
 class UserList extends Component {
   componentWillMount(){

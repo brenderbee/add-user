@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import { ModalFooter } from './';
-import { closeModal, addUser, updateUser } from './../../redux/actions';
+import { closeModal, addUser, updateUser } from './../../actions';
 
 function ModalForm(props) {
 

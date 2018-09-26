@@ -3,7 +3,7 @@ import Proptypes from 'prop-types';
 import { Tooltip, Button } from '@material-ui/core/';
 import AddIcon from '@material-ui/icons/Add';
 import { connect } from 'react-redux';
-import { openAddModal } from './../../redux/actions';
+import { openAddModal } from './../../actions';
 
 function AddUser(props) {
 

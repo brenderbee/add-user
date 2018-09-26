@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from "redux-thunk";
 import { Provider } from 'react-redux';
 import App from './App';
-import rootReducer from './redux/reducers';
+import rootReducer from './reducers';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const store = createStore(

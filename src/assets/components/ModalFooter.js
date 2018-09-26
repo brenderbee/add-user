@@ -2,7 +2,7 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import { Button, DialogActions } from '@material-ui/core/';
 import { connect } from 'react-redux';
-import { closeModal, resetCurrentUser } from './../../redux/actions';
+import { closeModal, resetCurrentUser } from './../../actions';
 
 function ModalFooter(props) {
 
