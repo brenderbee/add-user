@@ -21,5 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #Firebase credentials
-src/redux/constants/firebaseConfig.js
 src/constants/firebaseConfig.js
