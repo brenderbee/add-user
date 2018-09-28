@@ -1,4 +1,5 @@
 import AddUser from './AddUser';
+import Main from './Main';
 import Modal from './Modal';
 import ModalConductor from './ModalConductor';
 import ModalFooter from './ModalFooter';
@@ -12,6 +13,7 @@ import UserList from './UserList';
 
 export {
   AddUser,
+  Main,
   Modal,
   ModalConductor,
   ModalFooter,
