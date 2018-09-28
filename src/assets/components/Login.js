@@ -10,9 +10,9 @@ function Login() {
   return (
     <div className="login">
       <CircularProgress />
+      <Typography variant="headline">Login</Typography>
+      <Typography variant="caption">enter credentials to access app</Typography>
       <form>
-        <Typography variant="headline">Login</Typography>
-        <Typography variant="caption">enter credentials to access app</Typography>
         <TextField
           autoFocus
           margin="normal"
