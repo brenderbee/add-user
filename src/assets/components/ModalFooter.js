@@ -12,9 +12,9 @@ function ModalFooter(props) {
   }
 
   const renderActionText = () => {
-    if (props.currentModal === 'ADD_USER') {
+    if (props.currentModal === 'ADD_MODAL') {
       return 'add';
-    } else if ( props.currentModal === 'EDIT_USER') {
+    } else if ( props.currentModal === 'EDIT_MODAL') {
       return 'update';
     } else {
       return '';
