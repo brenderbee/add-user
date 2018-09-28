@@ -14,7 +14,7 @@ function ModalForm(props) {
           inputLast = event.target.querySelector('#last-name').value.trim(),
           inputEmail = event.target.querySelector('#email').value.trim(),
           newId = v4();
-    if (props.currentModal === 'EDIT_USER') {
+    if (props.currentModal === 'EDIT_MODAL') {
       props.sendUpdatedUser({
         first_name: inputFirst,
         last_name: inputLast,
