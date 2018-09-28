@@ -9,6 +9,7 @@ firebase.initializeApp(firebaseConfig);
 const databaseRef = firebase.database();
 const usersRef = databaseRef.ref('users');
 
+// Actions on modal
 export function openAddModal() {
   return {
     type: types.ADD_USER
@@ -27,6 +28,20 @@ export function closeModal() {
   }
 }
 
+// Actions on Authentication
+export function updateLoginEmail() {
+
+}
+
+export function updateLoginPassword() {
+
+}
+
+export function updateLoginError() {
+  
+}
+
+// Actions on firebase database
 export const fetchUsers = () => async dispatch => {
   usersRef.on('value', snapshot => {
     dispatch({
