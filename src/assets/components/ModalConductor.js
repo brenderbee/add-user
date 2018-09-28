@@ -5,7 +5,7 @@ import { Modal } from './';
 
 function ModalConductor(props) {
   switch (props.currentModal) {
-    case 'ADD_USER':
+    case 'ADD_MODAL':
       return (
         <Modal
           open={true}
@@ -15,7 +15,7 @@ function ModalConductor(props) {
           email=""
         />
       );
-    case 'EDIT_USER':
+    case 'EDIT_MODAL':
       return (
         <Modal
           open={true}
