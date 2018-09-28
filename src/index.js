@@ -12,7 +12,10 @@ const store = createStore(
   {
     currentModal: '',
     masterUserList: {},
-    currentUser: {}
+    currentUser: {},
+    loginEmail: '',
+    loginPassword: '',
+    loginError: ''
   },
   composeEnhancers(applyMiddleware(reduxThunk))
 );
