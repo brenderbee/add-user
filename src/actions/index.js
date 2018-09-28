@@ -12,13 +12,13 @@ const usersRef = databaseRef.ref('users');
 // Actions on modal
 export function openAddModal() {
   return {
-    type: types.ADD_USER
+    type: types.ADD_MODAL
   }
 }
 
 export function openEditModal() {
   return {
-    type: types.EDIT_USER
+    type: types.EDIT_MODAL
   }
 }
 
