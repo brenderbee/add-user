@@ -38,7 +38,15 @@ export function updateLoginPassword() {
 }
 
 export function updateLoginError() {
-  
+
+}
+
+export function updateLoading() {
+
+}
+
+export const loginClient = () => async dispatch => {
+
 }
 
 // Actions on firebase database
