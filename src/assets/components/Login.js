@@ -1,10 +1,15 @@
 import React from 'react';
-import { Button, TextField, Typography } from '@material-ui/core/';
+import { Button,
+  TextField,
+  Typography,
+  CircularProgress
+} from '@material-ui/core/';
 import './../css/Login.css';
 
 function Login() {
   return (
     <div className="login">
+      <CircularProgress />
       <form>
         <Typography variant="headline">Login</Typography>
         <Typography variant="caption">enter credentials to access app</Typography>
