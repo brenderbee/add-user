@@ -15,7 +15,8 @@ const store = createStore(
     currentUser: {},
     loginEmail: '',
     loginPassword: '',
-    loginError: ''
+    loginError: '',
+    loading: false
   },
   composeEnhancers(applyMiddleware(reduxThunk))
 );
