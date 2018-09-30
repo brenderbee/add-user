@@ -42,8 +42,11 @@ export function resetLoginEmail() {
   }
 }
 
-export function updateLoginPassword() {
-
+export function updateLoginPassword(password) {
+  return {
+    type: types.PASSWORD_AUTH,
+    payload: password
+  }
 }
 
 export function updateLoginError() {
