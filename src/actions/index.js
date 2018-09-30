@@ -36,6 +36,12 @@ export function updateLoginEmail(email) {
   }
 }
 
+export function resetLoginEmail() {
+  return {
+    type: types.EMAIL_LOGOUT
+  }
+}
+
 export function updateLoginPassword() {
 
 }
