@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Button,
   TextField,
   Typography,
   CircularProgress
 } from '@material-ui/core/';
 import './../css/Login.css';
+import { updateLoginEmail, updateLoginPassword } from './../../actions';
 
 function Login() {
   return (
@@ -42,4 +45,14 @@ function Login() {
   );
 }
 
-export default Login;
+Login.propTypes = {
+  sendLoginEmail: PropTypes.func,
+  sendLoginPassword: PropTypes.func
+}
+
+const mapDispatchToProps = dispatch => ({
+  sendLoginEmail: () => dispatch(updateLoginEmail()),
+  sendLoginPassword: () => dispatch(updateLoginPassword())
+});
+
+export default connect(null, mapDispatchToProps)(Login);
