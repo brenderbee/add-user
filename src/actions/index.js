@@ -49,6 +49,12 @@ export function updateLoginPassword(password) {
   }
 }
 
+export function resetLoginPassword() {
+  return {
+    type: types.PASSWORD_LOGOUT
+  }
+}
+
 export function updateLoginError() {
 
 }
