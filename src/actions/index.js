@@ -60,7 +60,15 @@ export function updateLoginError() {
 }
 
 export function updateLoading() {
+  return {
+    type: types.LOADING
+  }
+}
 
+export function notLoading() {
+  return {
+    type: types.LOADING_COMPLETE
+  }
 }
 
 export const loginClient = () => async dispatch => {
