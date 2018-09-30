@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import rootReducer from './redux/reducers';
+import rootReducer from './reducers';
 import reduxThunk from "redux-thunk";
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -11,7 +11,11 @@ const store = createStore(
   {
     currentModal: '',
     masterUserList: {},
-    currentUser: {}
+    currentUser: {},
+    loginEmail: '',
+    loginPassword: '',
+    loginError: '',
+    loading: false
   },
   applyMiddleware(reduxThunk)
 );
