@@ -29,8 +29,11 @@ export function closeModal() {
 }
 
 // Actions on Authentication
-export function updateLoginEmail() {
-
+export function updateLoginEmail(email) {
+  return {
+    type: types.EMAIL_AUTH,
+    payload: email
+  }
 }
 
 export function updateLoginPassword() {
