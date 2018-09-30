@@ -15,5 +15,7 @@ export const EMAIL_AUTH = 'EMAIL_AUTH';
 export const EMAIL_LOGOUT = 'EMAIL_LOGOUT';
 export const PASSWORD_AUTH = 'PASSWORD_AUTH';
 export const PASSWORD_LOGOUT = 'PASSWORD_LOGOUT';
+export const ERROR_AUTH = 'ERROR_AUTH';
+export const ERROR_RESET = 'ERROR_RESET';
 export const LOADING = 'LOADING';
 export const LOADING_COMPLETE = 'LOADING_COMPLETE';
