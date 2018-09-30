@@ -9,13 +9,22 @@ import { Button,
 import './../css/Login.css';
 import { updateLoginEmail, updateLoginPassword } from './../../actions';
 
-function Login() {
+function Login(props) {
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const inputEmail = event.target.querySelector('#login-email').value.trim(),
+          inputPassword = event.target.querySelector('#login-password').value.trim();
+    props.sendLoginEmail(inputEmail);
+    props.sendLoginPassword(inputPassword);
+  }
+
   return (
     <div className="login">
       <CircularProgress />
       <Typography variant="headline">Login</Typography>
       <Typography variant="caption">enter credentials to access app</Typography>
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <TextField
           autoFocus
           margin="normal"
@@ -37,6 +46,7 @@ function Login() {
           variant="outlined"
           color="primary"
           size="small"
+          type="submit"
         >
           Login
         </Button>
@@ -51,8 +61,8 @@ Login.propTypes = {
 }
 
 const mapDispatchToProps = dispatch => ({
-  sendLoginEmail: () => dispatch(updateLoginEmail()),
-  sendLoginPassword: () => dispatch(updateLoginPassword())
+  sendLoginEmail: (email) => dispatch(updateLoginEmail(email)),
+  sendLoginPassword: (password) => dispatch(updateLoginPassword(password))
 });
 
 export default connect(null, mapDispatchToProps)(Login);
