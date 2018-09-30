@@ -10,4 +10,4 @@ function loginEmailReducer(state = '', action) {
   }
 }
 
-export default currentModalReducer;
+export default loginEmailReducer;
