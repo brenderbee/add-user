@@ -1,7 +1,7 @@
-import currentModalReducer from './redux/reducers/current-modal-reducer';
-import userListReducer from './redux/reducers/current-modal-reducer';
-import currentUserReducer from './redux/reducers/current-user-reducer';
-import rootReducer from './redux/reducers/';
+import currentModalReducer from './reducers/current-modal-reducer';
+import userListReducer from './reducers/current-modal-reducer';
+import currentUserReducer from './reducers/current-user-reducer';
+import rootReducer from './reducers/';
 
 describe('Add User App', () => {
   const initialStateModal = {
@@ -65,12 +65,12 @@ describe('Add User App', () => {
       expect(currentModalReducer(initialStateModal, { type: null })).toEqual(initialStateModal);
     });
 
-    it('Should change intial state of currentModalReducer to "ADD_USER".', () => {
-      expect(currentModalReducer(initialStateModal, { type: 'ADD_USER', payload: 'ADD_USER' })).toEqual('ADD_USER');
+    it('Should change intial state of currentModalReducer to "ADD_MODAL".', () => {
+      expect(currentModalReducer(initialStateModal, { type: 'ADD_MODAL', payload: 'ADD_MODAL' })).toEqual('ADD_MODAL');
     });
 
-    it('Should change intial state of currentModalReducer to "EDIT_USER".', () => {
-      expect(currentModalReducer(initialStateModal, { type: 'EDIT_USER', payload: 'EDIT_USER' })).toEqual('EDIT_USER');
+    it('Should change intial state of currentModalReducer to "EDIT_MODAL".', () => {
+      expect(currentModalReducer(initialStateModal, { type: 'EDIT_MODAL', payload: 'EDIT_MODAL' })).toEqual('EDIT_MODAL');
     });
 
     it('Should change state of currentModalReducer to null.', () => {
